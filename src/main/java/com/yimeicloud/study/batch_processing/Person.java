@@ -5,6 +5,8 @@ public class Person {
 	
 	private String lastName;
 	
+	private String birthday;
+	
 	public Person(){}
 	
 	public Person(String firstName, String lastName) {
@@ -12,6 +14,12 @@ public class Person {
 		this.lastName = lastName;
 	}
 
+	public Person(String firstName, String lastName, String birthday) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.birthday = birthday;
+	}
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -30,6 +38,14 @@ public class Person {
 	
 	@Override
 	public String toString() {
-		return "firstName:" + firstName + ",lastName:" + lastName;
+		return "firstName:" + firstName + ",lastName:" + lastName + ",birthday:" + birthday;
+	}
+
+	public String getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(String birthday) {
+		this.birthday = birthday;
 	}
 }
